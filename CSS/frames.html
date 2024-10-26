@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Simple Frame Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f0f0f0; color: #333; }
+        h1, h2 { color: #2c3e50; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<frameset cols="30%,70%" style="border: none;">
+    <frame src="javascript:parent.frames[0].document.write(`
+        <body style='background: #ecf0f1; padding: 20px;'>
+            <h2>Menu</h2>
+            <ul style='list-style-type: none; padding: 0;'>
+                <li><a href='#' target='main'>Home</a></li>
+                <li><a href='#' target='main'>About</a></li>
+                <li><a href='#' target='main'>Contact</a></li>
+            </ul>
+        </body>
+    `)" name="menu">
+    <frame src="javascript:parent.frames[1].document.write(`
+        <body style='background: linear-gradient(to bottom, #ffffff, #e0e0e0); padding: 20px;'>
+            <h1>Welcome to Our Beautiful Page</h1>
+            <p>This is a simple yet attractive framed layout. The gradient background adds a nice touch!</p>
+            <img src='/api/placeholder/300/200' alt='Placeholder Image' style='max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);'>
+        </body>
+    `)" name="main">
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+        </body>
+    </noframes>
+</frameset>
+</html>
