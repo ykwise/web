@@ -141,6 +141,9 @@ ul li{
     background: white;
     color:#06270f ;
 }
+.btn:focus{
+    outline: none;
+}
 #key-features{
     background: #ff1b68;
     margin-top: 20px;
