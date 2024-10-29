@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/invoice.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+        <title>Invoice Project</title>
+        <style>
+            table{
+                width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+                margin-bottom: 50px;
+            }
+            table,td,th{
+                border: solid 1px Black;
+                border-collapse: collapse;
+            }
+            td{
+                padding: 10px;
+
+            }
+            .A{
+                text-align: left;
+                padding: 20px 0px 20px 10px;
+            }
+            .B{
+                padding: 20px 0px 20px;
+
+            }
+            
+        </style>
+    </head>
+    <body style="background-color:antiquewhite;">
+        <h1 style="text-align: center; padding-top: 50px;">Restraunt Bill</h1>
+        <table>
+            <tbody><tr style="background-color: lightskyblue;">
+                <th colspan="5" class="A">Invoice#123ABC</th>
+                <th class="A">23 JULY 2024</th>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <b>Pay To:</b><br>
+                    <p>Yaswanth</p>
+
+                </td>
+                <td colspan="3">
+                    <b>CUSTOMER:</b><br>
+                    <p>YK</p>
+                </td>
+            </tr>
+            <tr style="background-color: lightskyblue;">
+                <th colspan="3" style="text-align: left;" class="B">Name/Description</th>
+                <th class="B">QTY</th>
+                <th class="B">MRP</th>
+                <th class="B">AMOUNT</th>
+            </tr>
+            <tr>
+                <td colspan="3">Biriyani</td>
+                <td>3</td>
+                <td>400</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td colspan="3">Chocolate Shake</td>
+                <td>3</td>
+                <td>200</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <th colspan="5" style="text-align: left; background-color: lightskyblue;">SubTotal:</th>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <th colspan="4" style="text-align: left; background-color: lightskyblue;">Tax</th>
+                <td>10%</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <th colspan="5" style="text-align: left; background-color: lightskyblue;">Grand Total:</th>
+                <td>Rs 1620</td>
+            </tr>
+        </tbody></table>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
