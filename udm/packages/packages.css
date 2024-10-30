@@ -27,11 +27,22 @@ main{
     color:black;
     background: white;
 }
+.clearflix{
+    clear: both;
+}
 #plus{
     background:rgba(213,215,220, 0.95);
 }
 #free{
     background: rgba(234,252,237, 0.95) ;
+    float: right;
+    border-right: none;
+   border-left: 4px solid #0e4f1f;
+   text-align: right;
+}
+#free:hover,
+#free:active{
+    border-left-color: #cf6d12 ;
 }
 #premium{
     background: rgba(14,79,31,0.95);
